@@ -1,0 +1,5 @@
+<StackLayout class="mb-4">
+    <Label text="Select Duration" class="text-lg font-bold mb-2" />
+    <Slider value="{{ duration }}" minValue="60" maxValue="180" class="mb-4" />
+    <Label text="{{ 'Duration: ' + duration + ' minutes' }}" class="text-center" />
+</StackLayout>

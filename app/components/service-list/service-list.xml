@@ -1,0 +1,7 @@
+<GridLayout>
+    <ListView items="{{ items }}" class="list-group">
+        <ListView.itemTemplate>
+            <service-card service="{{ $value }}" class="list-group-item" />
+        </ListView.itemTemplate>
+    </ListView>
+</GridLayout>

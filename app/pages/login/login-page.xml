@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-gray-100">
+    <ActionBar title="Relaxly" class="bg-blue-500 text-white" />
+    
+    <StackLayout class="p-4">
+        <Image src="~/images/logo.png" class="h-32 w-32 mb-8 self-center" />
+        
+        <Label text="Welcome to Relaxly" class="text-3xl text-center font-bold mb-4" />
+        <Label text="Professional Massage Services" class="text-lg text-center text-gray-600 mb-8" />
+        
+        <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input mb-4" />
+        <TextField hint="Password" text="{{ password }}" secure="true" class="input mb-6" />
+        
+        <Button text="Login" tap="{{ onLogin }}" class="btn-primary mb-4" />
+        <Button text="Register" tap="{{ onRegister }}" class="btn-secondary mb-4" />
+        
+        <Label text="{{ errorMessage }}" class="text-red-500 text-center" textWrap="true" />
+    </StackLayout>
+</Page>

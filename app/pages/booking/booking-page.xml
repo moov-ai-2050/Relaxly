@@ -1,0 +1,28 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Book a Massage" class="action-bar" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Select Service" class="heading" />
+            <ListView items="{{ services }}" selectedIndex="{{ selectedServiceIndex }}" class="list">
+                <ListView.itemTemplate>
+                    <StackLayout class="service-item">
+                        <Label text="{{ name }}" class="service-name" />
+                        <Label text="{{ description }}" class="service-desc" />
+                        <Label text="{{ 'SAR ' + pricePerHour }}" class="service-price" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+
+            <Label text="Duration: {{ duration }} minutes" class="heading" />
+            <Slider value="{{ duration }}" minValue="60" maxValue="180" />
+
+            <Label text="Select Date & Time" class="heading" />
+            <DateTimePicker date="{{ selectedDate }}" />
+
+            <Label text="{{ 'Total: ' + formattedPrice }}" class="price" />
+            
+            <Button text="Book Now" tap="{{ onBookNow }}" class="btn-primary" />
+        </StackLayout>
+    </ScrollView>
+</Page>
