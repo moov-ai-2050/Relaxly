@@ -12,11 +12,12 @@ export class BookingViewModel extends Observable {
     private _selectedService: ServiceType | null = null;
     private _totalPrice: number = 0;
     private _errorMessage: string = '';
+    public services: ServiceType[] = [];  // Add this line to declare services as a public property
 
     constructor() {
         super();
         this.bookingService = new BookingService();
-        this.services = SERVICES;
+        this.services = SERVICES; // Now this will work since services is defined
     }
 
     get duration(): number {
