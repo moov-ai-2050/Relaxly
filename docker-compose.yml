@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run start
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: relaxly_user
+      POSTGRES_PASSWORD: relaxly_password
+      POSTGRES_DB: relaxly_db
+    ports:
+      - "5432:5432"
